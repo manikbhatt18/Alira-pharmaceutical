@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import {Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart } from 'lucide-react';
+import {Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp,  Quote, Star  } from 'lucide-react';
 
 
 // --- Features Data ---
@@ -75,6 +75,74 @@ const capabilitiesData = [
 ];
 
 
+const faqData = [
+    {
+      question: "What makes Alira a trusted generic pharmaceutical wholesaler in the U.S.?",
+      answer: "Alira is an NABP-accredited and FDA-compliant generic pharmaceutical wholesaler licensed in all 50 states. With decades of experience in generic pharmaceuticals, it ensures reliable and compliant supply to hospitals, LTC facilities, specialty clinics, compounding pharmacies, and animal health providers."
+    },
+    {
+      question: "Does Alira supply products for both human and animal health?",
+      answer: "Yes, Alira is dedicated to serving both sectors. We provide a comprehensive range of FDA-approved generic medications for human health as well as specialized veterinary formulations, ensuring high standards of care across the board."
+    },
+    {
+      question: "Which healthcare sectors does Alira specialize in?",
+      answer: "We specialize in supplying Hospitals, Long-Term Care (LTC) facilities, Specialty Pharmacies, Independent Pharmacies, and Veterinary Clinics with cost-effective and compliant pharmaceutical solutions."
+    },
+    {
+      question: "How does Alira ensure compliance and product authenticity?",
+      answer: "We strictly adhere to DSCSA 2025 guidelines and maintain rigorous verification processes. By sourcing directly from approved manufacturers and employing advanced track-and-trace technology, we guarantee the authenticity of every product we distribute."
+    },
+    {
+      question: "Does Alira offer nationwide pharmaceutical distribution?",
+      answer: "Absolutely. Our robust logistics network covers all 50 states, ensuring timely and secure delivery of pharmaceuticals regardless of your facility's location."
+    },
+    {
+      question: "What types of products does Alira distribute?",
+      answer: "Our catalog includes a vast array of generic pharmaceuticals, over-the-counter (OTC) medications, injectables, vaccines, and specialty products tailored for both acute and chronic care needs."
+    },
+    {
+      question: "How does Alira support long-term care (LTC) facilities?",
+      answer: "We offer tailored packaging, automated dispensing support, and consistent inventory management services designed specifically to meet the unique high-volume and compliance needs of LTC providers."
+    },
+    {
+      question: "What sets Alira apart from other pharmaceutical distribution companies?",
+      answer: "Our unique combination of deep industry expertise, a dual focus on human and animal health, uncompromised regulatory compliance, and a partner-centric approach makes us more than just a distributor—we are a strategic ally in your growth."
+    },
+    {
+      question: "Can specialty and compounding pharmacies order directly through Alira?",
+      answer: "Yes, we offer a dedicated portal for specialty and compounding pharmacies, providing access to hard-to-find active pharmaceutical ingredients (APIs) and specialized dosage forms."
+    },
+    {
+      question: "How can new customers partner with Alira?",
+      answer: "Partnering is simple. Visit our 'New Customer Application' page, fill out the necessary business and license details, and our compliance team will review and approve your account for immediate ordering."
+    }
+  ];
+
+  const reviews = [
+    {
+      id: 1,
+      text: "What distinguishes these wholesale pharmaceutical distributors is their attention to detail and understanding of the unique needs of hospitals. They have streamlined our procurement process and have made it supremely easier for us to serve our patients.",
+      author: "Dr. Grace Kim",
+      role: "Director of Hospital Procurement",
+      rating: 4.2
+    },
+    {
+      id: 2,
+      text: "Reliability is critical in our field, and Alira has never let us down. Their commitment to compliance and the speed of their delivery network have significantly improved our operational efficiency across multiple clinic locations.",
+      author: "James Wilson",
+      role: "Regional Pharmacy Manager",
+      rating: 4.8
+    },
+    {
+      id: 3,
+      text: "Finding a distributor that understands both human and animal health needs is rare. Alira's specialized veterinary support and consistent stock of hard-to-find formulations have been invaluable to our practice.",
+      author: "Dr. Sarah Jenkins",
+      role: "Veterinary Medical Director",
+      rating: 4.5
+    }
+  ];
+
+
 const Home = () => {
 
     const [expandedCardId, setExpandedCardId] = useState(null);
@@ -103,11 +171,30 @@ const Home = () => {
     }
     return visible;
   };
+
+
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+
+
+  const [currentReview, setCurrentReview] = useState(0);
+
+  // Auto-slide functionality (Optional)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % reviews.length);
+    }, 5000); // Change slide every 5 seconds
+    return () => clearInterval(timer);
+  }, [reviews.length]);
   return (
     <div>
         {/* section 1 */}
         {/* Hero Section Inlined Here */}
-      <div className="relative bg-gray-50 pb-20 lg:pb-28">
+      <div className="relative bg-gray-50">
         {/* Background Banner Area */}
         <div 
           className="relative bg-teal-900 pt-32 pb-48 lg:pt-40 lg:pb-64 bg-cover bg-center"
@@ -628,8 +715,300 @@ const Home = () => {
 
             </div>
 
+
+
+            
+
           </div>
         </div>
+
+
+        {/* --- Mission & Vision Section (New) --- */}
+        <div className="bg-gray-50 py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Main Header */}
+            <div className="text-center mb-20">
+              <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
+                Mission & Vision
+              </h2>
+              <div className="h-1 w-24 bg-teal-500 mx-auto rounded-full"></div>
+            </div>
+
+            {/* Content Container */}
+            <div className="space-y-24 lg:space-y-32">
+              
+              {/* Mission Section (Image Left / Text Right) */}
+              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                {/* Image Placeholder */}
+                <div className="w-full lg:w-1/2">
+                   {/* Using anchor tag as placeholder container */}
+                   <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
+                        <span className="text-lg font-bold">Mission Image Placeholder</span>
+                        <span className="text-sm">(Click to Upload Image)</span>
+                      </div>
+                      {/* Optional: Add actual image src when available */}
+                      <img 
+                         src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Mission+Image" 
+                         alt="Mission Placeholder" 
+                         className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
+                      />
+                   </a>
+                </div>
+
+                {/* Text Content */}
+                <div className="w-full lg:w-1/2">
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 border-l-8 border-teal-500 pl-6">
+                    Mission
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    To advance healthcare delivery by ensuring access to safe, effective, and affordable generic pharmaceuticals through innovation, compliance, and service excellence. Alira is committed to empowering healthcare providers—hospitals, long-term care facilities, specialty clinics, and veterinary networks—through transparent operations, ethical sourcing, and nationwide reliability.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Our mission focuses on:</h4>
+                    <ul className="space-y-4">
+                      {[
+                        "Ensuring Secure, Compliant, And Traceable Pharmaceutical Distribution Across All 50 States.",
+                        "Maintaining Ethical And Transparent Partnerships With Healthcare Providers And Manufacturers.",
+                        "Promoting Innovation In Logistics, Compliance, And Digital Fulfillment For Greater Efficiency.",
+                        "Upholding Regulatory Integrity Through NABP, FDA, And DSCSA 2025 Compliance.",
+                        "Creating Long-Term Value By Prioritizing Patient Safety And Partner Trust."
+                      ].map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
+                          <span className="text-lg text-gray-700 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Vision Section (Text Left / Image Right) */}
+              <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                {/* Image Placeholder */}
+                <div className="w-full lg:w-1/2">
+                   {/* Using anchor tag as placeholder container */}
+                   <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
+                         <span className="text-lg font-bold">Vision Image Placeholder</span>
+                         <span className="text-sm">(Click to Upload Image)</span>
+                      </div>
+                      {/* Optional: Add actual image src when available */}
+                      <img 
+                         src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Vision+Image" 
+                         alt="Vision Placeholder" 
+                         className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
+                      />
+                   </a>
+                </div>
+
+                {/* Text Content */}
+                <div className="w-full lg:w-1/2">
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 border-l-8 border-teal-500 pl-6">
+                    Vision
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    To be among the nation's most trusted pharmaceutical distribution companies, defined by integrity, professionalism, and continuous innovation. Alira envisions a future where compliant and affordable access to quality pharmaceuticals strengthens the entire continuum of care.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Our vision aspires to:</h4>
+                    <ul className="space-y-4">
+                      {[
+                        "Lead The U.S. Market As A Benchmark In Generic Pharmaceutical Distribution.",
+                        "Advance Technology-Driven Operations That Enhance Fulfillment Speed And Traceability.",
+                        "Build Sustainable Business Practices That Support Healthcare Accessibility Nationwide.",
+                        "Foster A Partner-First Culture Rooted In Transparency And Responsiveness.",
+                        "Continue Setting New Standards Of Reliability And Trust Across Human And Animal Health Sectors."
+                      ].map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
+                          <span className="text-lg text-gray-700 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* --- Sign Up Section --- */}               
+        <div className="bg-teal-500 py-20 lg:py-28 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                Signing Up with Us, Effortlessly.
+              </h2>
+            </div>
+
+            {/* Steps Grid */}
+            <div className="grid md:grid-cols-3 gap-12 lg:gap-16 text-left">
+              
+              {/* Step 1 */}
+              <div className="space-y-4">
+                <div className="text-6xl font-bold opacity-80">1.</div>
+                <h3 className="text-2xl font-bold">Easy Online Application</h3>
+                <p className="text-teal-50 text-lg leading-relaxed">
+                  Access our easy-to-use online form. Fill in the necessary information, such as the name of the trader, sales representative details, location, and AP name, among other details.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="space-y-4">
+                <div className="text-6xl font-bold opacity-80">2.</div>
+                <h3 className="text-2xl font-bold">Application Review</h3>
+                <p className="text-teal-50 text-lg leading-relaxed">
+                  Our team will review and verify your application to ensure security and compliance throughout the process.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="space-y-4">
+                <div className="text-6xl font-bold opacity-80">3.</div>
+                <h3 className="text-2xl font-bold">Welcome Onboard</h3>
+                <p className="text-teal-50 text-lg leading-relaxed">
+                  We will activate your account, and it will be ready to execute transactions and monitor consignments, giving you comprehensive control over your account parameters.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="bg-white py-16 lg:py-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide">
+            Frequently Asked Questions
+          </h2>
+          <div className="h-1 w-16 bg-teal-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        {/* FAQ List */}
+        <div className="space-y-4">
+          {faqData.map((item, index) => (
+            <div 
+              key={index} 
+              className="border-b border-gray-200 last:border-0"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex justify-between items-center py-5 text-left focus:outline-none group"
+              >
+                <span className={`text-lg font-bold transition-colors duration-300 ${openIndex === index ? 'text-teal-600' : 'text-gray-900 group-hover:text-teal-600'}`}>
+                  Q{index + 1}. {item.question}
+                </span>
+                <span className={`ml-6 shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-teal-600' : 'text-gray-400 group-hover:text-teal-600'}`}>
+                  <ChevronDown className="w-6 h-6" />
+                </span>
+              </button>
+              
+              <div 
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openIndex === index ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <p className="text-gray-600 leading-relaxed pr-12 text-justify">
+                  {item.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div className="bg-white py-16 lg:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* Header */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          Client Review
+        </h2>
+
+        {/* Review Card Slider */}
+        <div className="relative max-w-4xl mx-auto">
+          <div className="bg-teal-500 rounded-2xl p-8 md:p-12 shadow-xl text-white relative transition-all duration-500 ease-in-out transform">
+            
+            {/* Quote Icon */}
+            <div className="absolute top-8 left-8 text-teal-300 opacity-50">
+              <Quote size={40} className="transform -scale-x-100" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center min-h-[300px]">
+              <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-2xl">
+                "{reviews[currentReview].text}"
+              </p>
+
+              {/* Bottom Row: Author & Rating */}
+              <div className="w-full flex flex-col md:flex-row justify-between items-end md:items-center mt-auto border-t border-teal-400/30 pt-6">
+                
+                {/* Author Info */}
+                <div className="text-left mb-4 md:mb-0">
+                  <h4 className="text-xl font-bold">{reviews[currentReview].author}</h4>
+                  <p className="text-teal-100 text-sm">{reviews[currentReview].role}</p>
+                </div>
+
+                {/* Rating */}
+                <div className="flex flex-col items-end">
+                  <div className="flex gap-1 text-yellow-300 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        size={18} 
+                        fill={i < Math.floor(reviews[currentReview].rating) ? "currentColor" : "none"} 
+                        className={i < Math.floor(reviews[currentReview].rating) ? "" : "opacity-50"}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm font-bold">{reviews[currentReview].rating}/5</span>
+                </div>
+              </div>
+
+              {/* End Quote Icon (Bottom Right) */}
+               <div className="absolute bottom-24 right-8 text-teal-300 opacity-50">
+                <Quote size={24} />
+              </div>
+
+            </div>
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-3 mt-8">
+            {reviews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentReview(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  currentReview === index ? 'w-8 bg-teal-500' : 'w-3 bg-gray-300 hover:bg-teal-300'
+                }`}
+                aria-label={`Go to review ${index + 1}`}
+              />
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
       </div>
     </div>
   )

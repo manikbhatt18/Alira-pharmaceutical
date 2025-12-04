@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 import LogoImg from '../../assets/Images/Logo.png';
 
 // Custom Logo Component - Redesigned to be distinct ("Bio-Hexagon" theme)
@@ -30,7 +31,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
     { name: "Human Health", href: "#human-health" },
     { name: "Animal Health", href: "#animal-health" },
     { name: "Careers", href: "#careers" },
@@ -45,7 +46,9 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="shrink-0 cursor-pointer">
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
