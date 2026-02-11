@@ -18,6 +18,7 @@ import Category8 from './pages/products/Category8.jsx'
 import Category9 from './pages/products/Category9.jsx'
 import Category10 from './pages/products/Category10.jsx'
 import Category11 from './pages/products/Category11.jsx'
+import ContactUs from './pages/ContactUs.jsx'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<ContactUs/>} />
         <Route path="/products/surgical-instruments/:productId" element={<Category1 />} />
         <Route path="/products/retractors-elevators/:productId" element={<Category2 />} />
         <Route path="/products/bone-neuro/:productId" element={<Category3 />} />

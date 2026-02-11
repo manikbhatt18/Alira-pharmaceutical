@@ -18,27 +18,24 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-700 mt-1 shrink-0" />
                 <span className="text-sm leading-relaxed">
-                  Address: 105 Airport Executive Park Nanuet, NY 10954
+                  A-116, URBTECH TRADE, CENTRE SECTOR-132, Baraula, Dadri,<br />
+                    Gautam Buddha Nagar, Uttar Pradesh, GAUTAM BUDDHA NAGAR,
+                    UTTAR PRADESH, 201304
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-teal-700 shrink-0" />
-                <a href="mailto:info@alirarx.com" className="text-sm hover:text-teal-700 transition-colors">
-                  Email: info@alirarx.com
+                <a href="mailto:anmolchauhan@alirapharmaceuticals.com" className="text-sm hover:text-teal-700 transition-colors">
+                  Email: anmolchauhan@alirapharmaceuticals.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-700 shrink-0" />
-                <a href="tel:800-210-0845" className="text-sm hover:text-teal-700 transition-colors">
-                  Phone: 800-210-0845
+                <a href="tel:+91-7895850793" className="text-sm hover:text-teal-700 transition-colors">
+                  Phone: +91 7895850793
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Printer className="w-5 h-5 text-teal-700 shrink-0" />
-                <span className="text-sm">
-                  Fax: 518-801-1696
-                </span>
-              </li>
+              
             </ul>
           </div>
 

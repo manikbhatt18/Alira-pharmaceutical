@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import mayoScissors from '../../assets/Images/mayoScissor.jpeg';
+
 const Category1 = () => {
   const { productId } = useParams();
 
@@ -32,7 +34,7 @@ const Category1 = () => {
     {
       name: "Mayo Scissors (Straight & Curved)",
       description: "Mayo scissors are heavy-duty surgical scissors used for cutting dense tissues such as muscle and fascia. Available in straight and curved variants, they provide excellent control, strength, and precision during surgical procedures.",
-      image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80&w=600"
+      image: mayoScissors
     },
     {
       name: "Metzenbaum Scissors",
@@ -109,7 +111,7 @@ const Category1 = () => {
             {/* Image Side */}
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                    {/* Placeholder Link for actual product image */}
                    <img 
                     src={item.image} 

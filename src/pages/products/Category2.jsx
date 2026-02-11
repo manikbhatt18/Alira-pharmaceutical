@@ -84,7 +84,7 @@ const Category2 = () => {
             {/* Image Side */}
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                    {/* Placeholder Link for actual product image */}
                    <img 
                     src={item.image} 

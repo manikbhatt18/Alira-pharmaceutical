@@ -148,9 +148,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Products", href: "#products", isDropdown: true }, // Marked as dropdown
-    { name: "Careers", href: "#careers" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -168,7 +166,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-30 h-full">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-45 h-full ml-30">
             {links.map((link) => {
               if (link.isDropdown) {
                 return (
