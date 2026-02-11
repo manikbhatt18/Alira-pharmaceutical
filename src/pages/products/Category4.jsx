@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import tongue from '../../assets/Images/tongue.jpeg';
+
 const Category4 = () => {
   const { productId } = useParams();
 
@@ -32,12 +34,12 @@ const Category4 = () => {
     {
       name: "Tongue Depressor",
       description: "A tongue depressor is used to gently hold the tongue down during oral examinations. It provides clear visibility of the throat and oral cavity and is commonly used in ENT and general medical practice.",
-      image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600"
+      image: tongue
     },
     {
       name: "Mouth Gag (Boyle Davis)",
       description: "The Boyle Davis mouth gag is used to keep the mouth open during oral and ENT surgical procedures. It provides stable access to the oral cavity while ensuring patient comfort and safety.",
-      image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600"
+      image: tongue
     }
   ];
 

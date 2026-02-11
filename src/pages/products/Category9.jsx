@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import drapes from '../../assets/Images/drapes.jpeg';
+import gowns from '../../assets/Images/gowns.jpeg';
+
 const Category9 = () => {
   const { productId } = useParams();
 
@@ -28,12 +31,12 @@ const Category9 = () => {
     {
       name: "Surgical Drapes (Sterile & Non-Sterile)",
       description: "Surgical drapes are used to cover patients and surrounding areas during procedures. Available in sterile and non-sterile options, they support effective infection control.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Surgical+Drapes"
+      image: drapes
     },
     {
       name: "Surgical Gowns (Sterile & Non-Sterile)",
       description: "Surgical gowns provide protective coverage for healthcare professionals during procedures. They are designed for comfort, fluid resistance, and safety.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Surgical+Gowns"
+      image: gowns
     }
   ];
 

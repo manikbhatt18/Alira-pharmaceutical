@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import lamin from '../../assets/Images/lamin.jpeg';
+import bonecutter from '../../assets/Images/bonecutter.jpeg';
+import bonenibbler from '../../assets/Images/bonenibbler.jpeg';
+
+
 const Category3 = () => {
   const { productId } = useParams();
 
@@ -32,17 +37,17 @@ const Category3 = () => {
     {
       name: "Bone Cutter / Rongeur",
       description: "Bone cutters or rongeurs are used to cut and remove small sections of bone. They provide strong leverage and precise cutting action during surgical procedures.",
-      image: "https://images.unsplash.com/photo-1583912267550-d41783d28666?auto=format&fit=crop&q=80&w=600"
+      image: bonecutter
     },
     {
       name: "Bone Nibbler",
       description: "Bone nibblers are designed to trim and shape bone edges with controlled pressure. They are commonly used in orthopedic and reconstructive surgeries.",
-      image: "https://images.unsplash.com/photo-1530026186672-2cd00ffc452e?auto=format&fit=crop&q=80&w=600"
+      image: bonenibbler
     },
     {
       name: "Laminectomy Punch / Kerrison Rongeur",
       description: "Laminectomy punches or Kerrison rongeurs are specialized instruments used in spinal and neurosurgeries to remove bone and soft tissue with high precision and safety.",
-      image: "https://images.unsplash.com/photo-1615818499660-323758362a4f?auto=format&fit=crop&q=80&w=600"
+      image: lamin
     }
   ];
 

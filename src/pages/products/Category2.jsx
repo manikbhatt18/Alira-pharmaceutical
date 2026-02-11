@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import langenback from '../../assets/Images/langenback.jpeg';
+import selfretaining from '../../assets/Images/selfretaining.jpeg';
+import skinhook from '../../assets/Images/skinhook.jpeg';
+import periosteal from '../../assets/Images/periosteal.jpeg';
+import volkman from '../../assets/Images/volkmann.jpeg';
+
+
 const Category2 = () => {
   const { productId } = useParams();
 
@@ -32,27 +39,27 @@ const Category2 = () => {
     {
       name: "Langenbeck Retractor",
       description: "The Langenbeck retractor is a handheld instrument used to retract soft tissues during surgical procedures. Its flat blade design allows controlled and precise retraction.",
-      image: "https://images.unsplash.com/photo-1618932260643-2e5e8e74567e?auto=format&fit=crop&q=80&w=600"
+      image: langenback
     },
     {
       name: "Volkmann Retractor",
       description: "Volkmann retractors are rake-style instruments used to retract soft tissues and wound edges. They are commonly used in orthopedic and general surgeries.",
-      image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600"
+      image: volkman
     },
     {
       name: "Skin Hook Retractor",
       description: "Skin hook retractors are fine instruments used for gentle retraction of skin and superficial tissues. They are ideal for delicate procedures requiring precision.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
+      image: skinhook
     },
     {
       name: "Self-Retaining Retractors (Weitlaner / Gelpi)",
       description: "Self-retaining retractors automatically hold tissues apart without manual assistance. Weitlaner and Gelpi retractors are widely used to maintain exposure during surgeries.",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600"
+      image: selfretaining
     },
     {
       name: "Periosteal Elevator",
       description: "Periosteal elevators are used to separate periosteum from bone surfaces during orthopedic and dental procedures. They allow controlled elevation with minimal damage.",
-      image: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?auto=format&fit=crop&q=80&w=600"
+      image: periosteal
     }
   ];
 

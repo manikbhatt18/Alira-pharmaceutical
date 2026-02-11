@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import gloves from '../../assets/Images/surgicalgloves.jpeg';
+import nitrile from '../../assets/Images/nitrile.jpeg';
+import latex from '../../assets/Images/latex.jpeg';
+
+
 const Category7 = () => {
   const { productId } = useParams();
 
@@ -28,17 +33,17 @@ const Category7 = () => {
     {
       name: "Latex Examination Gloves",
       description: "Latex examination gloves offer excellent elasticity, comfort, and tactile sensitivity. They are widely used in medical examinations and routine clinical procedures.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Latex+Gloves"
+      image: latex
     },
     {
       name: "Nitrile Examination Gloves",
       description: "Nitrile examination gloves provide strong chemical resistance and are latex-free, making them suitable for users with latex allergies. They offer durability and reliable protection.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Nitrile+Gloves"
+      image: nitrile
     },
     {
       name: "Surgical Gloves (Sterile)",
       description: "Sterile surgical gloves are used during surgical procedures to maintain a sterile environment. They provide a precise fit, high sensitivity, and maximum protection.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Surgical+Gloves"
+      image: gloves
     }
   ];
 

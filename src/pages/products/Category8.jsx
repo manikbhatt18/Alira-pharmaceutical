@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import n95 from '../../assets/Images/n95.jpeg';
+import shoe from '../../assets/Images/shoecovers.jpeg';
+import ply from '../../assets/Images/3ply.jpeg';
+import aprons from '../../assets/Images/aprons.jpeg';
+import Caps from '../../assets/Images/caps.jpeg';
+import gowns from '../../assets/Images/gowns.jpeg';
+
 const Category8 = () => {
   const { productId } = useParams();
 
@@ -28,32 +35,32 @@ const Category8 = () => {
     {
       name: "3-Ply Disposable Face Masks",
       description: "3-ply disposable face masks provide effective filtration and breathability for everyday medical use. They are suitable for hospitals, clinics, and general healthcare settings.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=3-Ply+Face+Masks"
+      image: ply
     },
     {
       name: "N95 Face Masks",
       description: "N95 face masks offer high filtration efficiency against airborne particles. They are commonly used in high-risk medical environments requiring enhanced respiratory protection.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=N95+Face+Masks"
+      image: n95
     },
     {
       name: "Disposable Shoe Covers (Plastic & Non-Woven)",
       description: "Disposable shoe covers are used to maintain cleanliness in sterile environments. They prevent the spread of contaminants across clinical areas.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Shoe+Covers"
+      image: shoe
     },
     {
       name: "Disposable Caps (Bouffant / Surgeon)",
       description: "Disposable caps are used to cover hair and reduce contamination risks in surgical and clinical settings. They are lightweight, breathable, and comfortable to wear.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Disposable+Caps"
+      image: Caps
     },
     {
       name: "Disposable Aprons",
       description: "Disposable aprons provide a protective barrier against fluids and contaminants. They are commonly used in healthcare, laboratory, and hygiene-sensitive environments.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Disposable+Aprons"
+      image: aprons
     },
     {
       name: "Isolation Gowns",
       description: "Isolation gowns are designed to protect healthcare workers from exposure to infectious agents. They provide full coverage and are suitable for medical and clinical use.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Isolation+Gowns"
+      image: gowns
     }
   ];
 

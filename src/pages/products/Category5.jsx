@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import scalpel from '../../assets/Images/scalpel.jpeg';
+
+
+
 const Category5 = () => {
   const { productId } = useParams();
 
@@ -32,7 +36,7 @@ const Category5 = () => {
     {
       name: "Scalpel Blades (Disposable)",
       description: "Disposable scalpel blades are designed for single-use surgical applications, ensuring sharp, clean incisions while maintaining high standards of hygiene and infection control.",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600"
+      image: scalpel
     }
   ];
 

@@ -2,6 +2,17 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import mayoScissors from '../../assets/Images/mayoScissor.jpeg';
+import operatingScissors from '../../assets/Images/operatingscissors.jpeg';
+import forceps from '../../assets/Images/tissueforceps.jpeg';
+import needleholders from '../../assets/Images/needleholders.jpeg';
+import Babcock from '../../assets/Images/babcock.jpeg';
+import backhaus from '../../assets/Images/backhaus.jpeg';
+import allis from '../../assets/Images/allistissue.jpeg';
+import artery from '../../assets/Images/artery.jpeg';
+import metzenbaum from '../../assets/Images/metzenbaum.jpeg';
+import surgicalknifes from '../../assets/Images/surgicalknifes.jpeg';
+
+
 
 const Category1 = () => {
   const { productId } = useParams();
@@ -39,47 +50,47 @@ const Category1 = () => {
     {
       name: "Metzenbaum Scissors",
       description: "Metzenbaum scissors are lightweight instruments designed for cutting delicate soft tissues. Their long handles and short blades allow precise dissection while minimizing tissue trauma.",
-      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600"
+      image: metzenbaum
     },
     {
       name: "Operating Scissors (Sharp / Blunt)",
       description: "Operating scissors are versatile cutting instruments used for both sharp and blunt dissection. They are commonly used in general surgeries for cutting tissues, sutures, and dressings.",
-      image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600"
+      image: operatingScissors
     },
     {
       name: "Surgical Knife Handles (No. 3 & 4)",
       description: "Surgical knife handles are used to securely hold disposable scalpel blades during surgical incisions. Handle No. 3 and No. 4 are compatible with different blade sizes for precise cutting control.",
-      image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600"
+      image: surgicalknifes
     },
     {
       name: "Tissue Forceps (Toothed / Non-Toothed)",
       description: "Tissue forceps are used to grasp and hold tissues during surgical procedures. Toothed forceps provide a firm grip on tough tissues, while non-toothed forceps are suitable for delicate tissue handling.",
-      image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=600"
+      image: forceps
     },
     {
       name: "Artery Forceps / Hemostats (Straight & Curved)",
       description: "Artery forceps are used to clamp blood vessels and control bleeding during surgery. Available in straight and curved designs, they ensure secure locking and effective hemostasis.",
-      image: "https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?auto=format&fit=crop&q=80&w=600"
+      image: artery
     },
     {
       name: "Needle Holders (Mayo-Hegar / Olsen-Hegar)",
       description: "Needle holders are designed to securely hold suturing needles during wound closure. Mayo-Hegar and Olsen-Hegar types offer excellent grip, balance, and control for precise suturing.",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600"
+      image: needleholders
     },
     {
       name: "Allis Tissue Forceps",
       description: "Allis tissue forceps are used to grasp tough tissues during surgical procedures. Their multiple teeth provide a firm hold, making them suitable for holding fascia and connective tissue.",
-      image: "https://images.unsplash.com/photo-1583912267670-6575ad43263d?auto=format&fit=crop&q=80&w=600"
+      image: allis
     },
     {
       name: "Babcock Forceps",
       description: "Babcock forceps are atraumatic instruments designed to hold delicate tubular structures such as intestines and tissues without causing damage. They are commonly used in abdominal and general surgeries.",
-      image: "https://images.unsplash.com/photo-1582719471384-89d3ec0179d6?auto=format&fit=crop&q=80&w=600"
+      image: Babcock
     },
     {
       name: "Backhaus Towel Clamp",
       description: "Backhaus towel clamps are used to secure surgical drapes in place during procedures. Their sharp pointed tips ensure a firm grip on drapes without slipping.",
-      image: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&q=80&w=600"
+      image: backhaus
     }
   ];
 

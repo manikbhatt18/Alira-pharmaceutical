@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import iv from '../../assets/Images/ivset.jpeg';
+import syringes from '../../assets/Images/syringes.jpeg';
+
+
 const Category11 = () => {
   const { productId } = useParams();
 
@@ -28,17 +32,17 @@ const Category11 = () => {
     {
       name: "Disposable Syringes with Needles",
       description: "Disposable syringes with needles are used for accurate medication delivery. They ensure safe, hygienic, and precise injections.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Syringes+with+Needles"
+      image: syringes
     },
     {
       name: "IV Sets",
       description: "IV sets are used to administer fluids and medications directly into the bloodstream. They provide controlled and reliable fluid delivery.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=IV+Sets"
+      image: iv
     },
     {
       name: "IV Cannula",
       description: "IV cannulas are used to provide vascular access for fluid and medication administration. They are designed for smooth insertion and patient comfort.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=IV+Cannula"
+      image: iv
     }
   ];
 

@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import gr from '../../assets/Images/gauzerolls.jpeg';
+import gs from '../../assets/Images/gauzeswabs.jpeg';
+import cr from '../../assets/Images/cottonrolls.jpeg';
+import crepe from '../../assets/Images/crepe.jpeg';
+import bandages from '../../assets/Images/adhesivebandages.jpeg';
+
 const Category10 = () => {
   const { productId } = useParams();
 
@@ -28,27 +34,27 @@ const Category10 = () => {
     {
       name: "Absorbent Gauze Rolls",
       description: "Absorbent gauze rolls are used for wound dressing and bandaging. They provide high absorbency and breathability for effective wound care.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Gauze+Rolls"
+      image: gr
     },
     {
       name: "Gauze Swabs (Sterile & Non-Sterile)",
       description: "Gauze swabs are used for cleaning, dressing, and protecting wounds. Sterile and non-sterile options are available for different medical needs.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Gauze+Swabs"
+      image: gs
     },
     {
       name: "Crepe Bandages",
       description: "Crepe bandages provide light compression and support to injured areas. They are commonly used for sprains, strains, and wound dressing support.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Crepe+Bandages"
+      image: crepe
     },
     {
       name: "Adhesive Bandages (Plasters)",
       description: "Adhesive bandages are used for covering minor cuts and wounds. They protect against contamination while promoting healing.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Adhesive+Bandages"
+      image: bandages
     },
     {
       name: "Absorbent Cotton Rolls",
       description: "Absorbent cotton rolls are used for cleaning wounds, applying medication, and general medical use. They are soft, highly absorbent, and skin-friendly.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Cotton+Rolls"
+      image: cr
     }
   ];
 

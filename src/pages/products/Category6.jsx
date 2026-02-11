@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import Kidney from '../../assets/Images/kidneytray.jpeg';
+
+
+
 const Category6 = () => {
   const { productId } = useParams();
 
@@ -33,7 +37,7 @@ const Category6 = () => {
     {
       name: "Kidney Tray",
       description: "Kidney trays are used to hold medical waste, dressings, or instruments during medical procedures. Their curved shape allows easy handling and prevents spillage.",
-      image: "https://placehold.co/600x400/e0f2f1/00897b?text=Kidney+Tray"
+      image: Kidney
     },
     {
       name: "Gallipot",
