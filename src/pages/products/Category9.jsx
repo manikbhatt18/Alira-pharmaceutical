@@ -63,11 +63,11 @@ const Category9 = () => {
           >
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                    <img 
                     src={item.image} 
                     alt={item.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>

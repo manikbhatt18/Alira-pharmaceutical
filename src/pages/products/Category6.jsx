@@ -73,7 +73,7 @@ const Category6 = () => {
                    <img 
                     src={item.image} 
                     alt={item.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>

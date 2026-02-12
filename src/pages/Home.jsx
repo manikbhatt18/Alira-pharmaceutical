@@ -8,43 +8,43 @@ const featuresData = [
   {
     id: 1,
     icon: Globe,
-    title: "Valuable Industry Experience",
-    shortText: "Your business deserves expert guidance, and our sales representatives bring unmatched industry expertise of 30+ years to the table. They manage your account while ensuring you have access to the best pharmaceutical solutions.",
+    title: "Manufacturing Excellence",
+    shortText: "We manufacture high-quality surgical instruments and medical disposables using premium-grade materials and advanced production processes to ensure durability and precision.",
     longText: " Our team's deep understanding of market trends and regulatory landscapes helps us anticipate challenges and provide proactive solutions. We don't just supply products; we offer strategic insights that help your pharmacy thrive in a competitive environment."
   },
   {
     id: 2,
     icon: Scan,
-    title: "2000+ SKUs",
-    shortText: "As seasoned generic pharmaceutical distributors, our vast inventory includes over 2,000 SKUs, allowing us to supply a comprehensive range of pharmaceutical products to meet diverse patient needs.",
+    title: "Strict Quality Control",
+    shortText: "Every product undergoes rigorous inspection and testing to meet international healthcare standards and ensure consistent performance.",
     longText: " From high-volume generics to hard-to-find niche medications, our catalog is constantly updated to reflect current demands. We maintain robust stock levels to minimize backorders and ensure your patients never have to wait for critical treatments."
   },
   {
     id: 3,
     icon: Truck, // Reusing Truck icon, or could use MapPin/Globe
-    title: "Vast Distribution Network in 50 States",
-    shortText: "With our extensive nationwide distribution network and license to operate in all 50 states, we ensure timely and compliant deliveries, reducing wait times and helping you maintain optimal inventory levels.",
+    title: "Global Export Network",
+    shortText: "We supply hospitals, distributors, and medical institutions across international markets with reliable shipping and documentation support.",
     longText: " Our logistics partners are vetted for excellence in cold-chain management and secure transport. Whether you are a rural independent pharmacy or a large urban hospital system, our reliable supply chain reaches you with speed and precision."
   },
   {
     id: 4,
     icon: DollarSign,
-    title: "Best Pricing in the Industry",
-    shortText: "Our commitment to affordability is unwavering. We leverage long-standing manufacturer partnerships and bulk procurement strength to deliver competitive pricing at scale.",
+    title: "Competitive Factory Pricing",
+    shortText: "As direct manufacturers, we offer cost-effective pricing without compromising on quality.",
     longText: " We pass these savings directly to you, improving your pharmacy's margins without compromising on quality. Our transparent pricing models and flexible terms are designed to support your financial sustainability."
   },
   {
     id: 5,
     icon: Lightbulb,
-    title: "Commitment to Innovation",
-    shortText: "By investing in advanced technology, Alira streamlines ordering, tracking, and compliance. Healthcare partners—from specialty clinics to hospital chains—benefit from our digital-first approach.",
+    title: "Customization & OEM Support",
+    shortText: "We provide private labelling, OEM manufacturing, and customized product solutions to meet specific client requirements.",
     longText: " Our user-friendly online portal provides real-time inventory visibility, automated order tracking, and seamless DSCSA compliance documentation. We are constantly evolving our tech stack to make your procurement process effortless."
   },
   {
     id: 6,
     icon: Users,
-    title: "Partner-Centric Approach",
-    shortText: "Long-term relationships drive our success. Alira works closely with hospitals, LTC providers, and specialty networks—listening to their needs and delivering solutions that help them succeed.",
+    title: "Trusted Industry Experience",
+    shortText: "With strong expertise in surgical and medical manufacturing, we focus on innovation, compliance, and long-term partnerships.",
     longText: " We view ourselves as an extension of your team. Our dedicated support staff is always available to resolve issues, answer questions, and tailor our services to match your specific operational requirements."
   }
 ];
@@ -54,24 +54,35 @@ const featuresData = [
 const capabilitiesData = [
   {
     id: 1,
-    title: "Provider & Pharmacy Solutions",
-    description: "Tailored support for diverse healthcare partners and specialty distributors to simplify procurement and maintain an uninterrupted treatment supply."
+    title: "Precision Surgical Manufacturing",
+    description: "We manufacture high-quality surgical instruments including scissors, forceps, retractors, bone instruments, and ENT tools using medical-grade stainless steel. Every product is engineered for durability, corrosion resistance, and surgical precision."
   },
   {
     id: 2,
-    title: "Compliance & Quality Assurance",
-    description: "We ensure full adherence to NABP, FDA, and DSCSA 2025 guidelines. Every shipment undergoes stringent checks to ensure healthcare providers—across human and animal health—receive authentic and traceable products."
+    title: "Advanced Production Infrastructure",
+    description: "Our modern manufacturing facility is equipped with advanced machinery, precision tooling, and skilled technicians to ensure consistent quality and large-scale production capacity."
   },
   {
     id: 3,
-    title: "Wholesale & Specialty Distribution",
-    description: "Reliable, nationwide generic pharmaceutical supply for healthcare and specialty care providers across the U.S. Our consistent processes make us a trusted choice among wholesale pharmaceutical distributors."
+    title: "Strict Quality Control",
+    description: "Each product undergoes multi-stage inspection and quality testing to ensure compliance with international healthcare standards. We focus on safety, reliability, and performance in every batch."
   },
   {
-    id: 4, // Demo Content
-    title: "Strategic Global Sourcing",
-    description: "Leveraging robust international partnerships to secure high-quality active ingredients and finished dosage forms, ensuring a resilient supply chain against global market fluctuations."
-  }
+    id: 4,
+    title: "Comprehensive Product Range",
+    description: "From surgical instruments and retractors to PPE, surgical drapes, gloves, wound care products, and IV disposables — we offer a complete medical supply portfolio under one roof."
+  },
+  {
+    id: 5, 
+    title: "Global Export Expertise",
+    description: "We export worldwide with professional packaging, documentation, and regulatory support. Our streamlined logistics system ensures timely and secure international deliveries."
+  },
+  {
+    id: 6, 
+    title: "OEM & Private Label Solutions",
+    description: "We provide customized manufacturing and private label services for distributors, hospitals, and medical brands. Branding, packaging, and product specifications can be tailored to your requirements."
+  },
+  
 ];
 
 
@@ -210,16 +221,16 @@ const Home = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Trusted Pharmaceutical Distribution Across the U.S.
+                Global Manufacturer & Exporter of Surgical & Medical Supplies
               </h1>
               <p className="text-lg md:text-xl text-teal-50 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Serving hospitals, long term care facilities, specialty pharmacies, chain pharmacies and other pharmaceutical institutions with compliant and high-quality healthcare products.
+                Delivering high-quality surgical instruments, PPE, wound care, and medical disposables to healthcare institutions worldwide.
               </p>
 
               {/* Link with Arrow */}
               <div className="mb-10">
-                <a href="#" className="inline-flex items-center text-teal-300 font-semibold hover:text-white transition-colors group">
-                  Explore Human Health Solutions
+                <a href="/about" className="inline-flex items-center text-teal-300 font-semibold hover:text-white transition-colors group">
+                  Explore More About Us 
                   <span className="ml-2 bg-teal-700/50 p-1 rounded-full group-hover:bg-teal-600 transition-colors">
                     <ArrowRight size={16} />
                   </span>
@@ -229,10 +240,10 @@ const Home = () => {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
-                  New Customer Application
+                  Get Product Catalog
                 </button>
                 <button className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg">
-                  Existing Customer Login
+                  Request a Quote
                 </button>
               </div>
             </div>
@@ -248,9 +259,9 @@ const Home = () => {
               <div className="flex justify-center mb-4">
                 <Truck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Vast Inventory</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Wide Product Range</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Equip your pharmacy with our wide-scale generic pharmaceutical SKUs, ensuring access to a comprehensive portfolio across key therapeutic and specialty categories.
+                Manufacturing surgical instruments, PPE, IV products, wound care, and hospital disposables under strict quality standards for global markets.
               </p>
             </div>
 
@@ -259,9 +270,9 @@ const Home = () => {
               <div className="flex justify-center mb-4">
                 <Medal className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Uncompromised Quality</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Certified Manufacturing</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                We ensure authenticity, safety, and traceability through verified sourcing from licensed manufacturers and authorized distributors, maintaining strict adherence to NABP and FDA standards.
+                Produced using medical-grade stainless steel and high-quality materials with stringent quality control and international compliance.
               </p>
             </div>
 
@@ -270,9 +281,9 @@ const Home = () => {
               <div className="flex justify-center mb-4">
                 <FileCheck className="w-10 h-10 text-teal-700" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">100% Compliant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Global Export Network</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                NABP-accredited, FDA-registered, and DSCSA 2025-compliant—Alira upholds the highest regulatory and quality benchmarks in pharmaceutical distribution nationwide.
+                Supplying hospitals, distributors, and healthcare institutions across Asia, Africa, Europe, and the Middle East.
               </p>
             </div>
 
@@ -303,27 +314,23 @@ const Home = () => {
             <div className="w-full lg:w-1/2 space-y-6">
               <div className="space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 border-l-4 border-teal-500 pl-4">
-                  About Alira
+                  About Alira Pharmaceuticals
                 </h2>
                 <p className="text-lg font-semibold text-gray-700 pl-5">
-                  Your trusted partner in generic distribution across the U.S.
+                  Global Manufacturer & Exporter of Surgical and Medical Supplies
                 </p>
               </div>
 
               <div className="text-gray-600 leading-relaxed space-y-4 text-justify pl-1">
                 <p>
-                  Alira Pharmaceutical Inc. is a nationally licensed, NABP-accredited generic pharmaceutical distributor authorized in all 50 states and headquartered in Nanuet, New York.
+                  Alira Pharmaceuticals is a leading manufacturer and exporter of high-quality surgical instruments, hospital disposables, PPE, wound care products, and IV supplies. We combine advanced manufacturing processes with strict quality control to deliver reliable medical products to healthcare institutions worldwide.
                 </p>
                 <p>
-                  Founded by a team of licensed pharmacists, Alira combines clinical expertise with business strategy to ensure patient safety, authenticity, and ethical distribution across the healthcare system. Backed by more than 80 years of combined leadership experience in distribution, compliance, and healthcare, our leadership team drives integrity and operational excellence nationwide.
+                  Our products are manufactured using medical-grade materials and are designed to meet international healthcare standards. With a strong global distribution network, we proudly supply hospitals, distributors, and healthcare partners across multiple countries.
                 </p>
               </div>
 
-              <div className="pt-4 pl-1">
-                <a href="#read-more" className="text-teal-600 font-bold hover:text-teal-700 inline-flex items-center border-b-2 border-teal-600 pb-1 hover:border-teal-700 transition-colors">
-                  Read More
-                </a>
-              </div>
+              
             </div>
 
           </div>
@@ -336,43 +343,36 @@ const Home = () => {
 
             {/* Header */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-wider">
-              In Compliance With
+              Certified Quality & Global Standards
             </h2>
             <div className="h-1 w-16 bg-teal-500 mx-auto mb-6 rounded-full"></div>
 
             <p className="text-xl font-bold text-gray-800 mb-2">
-              Compliant. Traceable. Trusted.
+              Manufactured to International Medical Standards
             </p>
             <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-              Exceeding NABP, FDA, and DSCSA 2025 standards nationwide.
+              All our products are manufactured under strict quality control systems using medical-grade raw materials. We adhere to international manufacturing and export standards to ensure safety, reliability, and consistent performance across global markets.
             </p>
 
             {/* Logo Grid */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-              {/* Logo Card 1 (NABP) */}
-              {/* Note: 'href' can be updated to the actual verification link */}
-              <a href="#" className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow ">
-                {/* IMPORT NOTE: Replace 'nabp_placeholder.png' with your imported image variable or path */}
-                <img
-                  src="https://via.placeholder.com/300x100?text=NABP+Logo"
-                  alt="NABP Accredited"
-                  className="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
-              </a>
+              {/* Box 1 */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
+                <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
+                  ISO Certified Manufacturing
+                </p>
+              </div>
 
-              {/* Logo Card 2 (DSCSA) */}
-              {/* Note: 'href' can be updated to the actual verification link */}
-              <a href="#" className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow ">
-                {/* IMPORT NOTE: Replace 'dscsa_placeholder.png' with your imported image variable or path */}
-                <img
-                  src="https://via.placeholder.com/300x100?text=DSCSA+Logo"
-                  alt="DSCSA Compliant"
-                  className="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
-              </a>
+              {/* Box 2 */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
+                <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
+                  Global Export Standards
+                </p>
+              </div>
 
             </div>
+
           </div>
         </div>
 
@@ -388,7 +388,7 @@ const Home = () => {
               </h2>
               <div className="h-1 w-20 bg-teal-500 mx-auto mb-8 rounded-full"></div>
               <p className="text-gray-600 text-lg leading-relaxed">
-                At the nexus of trust and tradition, we are not just your generic pharmaceutical distributors, but your partners in achieving pharmaceutical excellence.
+                Delivering precision-engineered surgical instruments and medical supplies with global quality standards and reliable export capabilities.
               </p>
             </div>
 
@@ -413,21 +413,10 @@ const Home = () => {
                   <div className="text-gray-600 text-sm leading-relaxed mb-4 grow">
                     <p>{feature.shortText}</p>
 
-                    {/* Expandable Text */}
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCardId === feature.id ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                      <p className="pt-2 text-teal-800">{feature.longText}</p>
-                    </div>
+                    
                   </div>
 
-                  {/* Read More Button */}
-                  <div className="mt-auto pt-2">
-                    <button
-                      onClick={() => toggleReadMore(feature.id)}
-                      className="text-teal-500 font-semibold text-sm hover:text-teal-700 border-b border-transparent hover:border-teal-700 transition-colors focus:outline-none"
-                    >
-                      {expandedCardId === feature.id ? 'Read Less' : 'Read More'}
-                    </button>
-                  </div>
+                  
                 </div>
               ))}
             </div>
@@ -440,10 +429,10 @@ const Home = () => {
         <div className="bg-teal-500 py-20 lg:py-28 text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Comprehensive Distribution Capabilities
+              Comprehensive Manufacturing & Global Export Capabilities
             </h2>
             <p className="max-w-4xl mx-auto text-lg md:text-xl text-teal-50 font-medium">
-              Alira Pharmaceutical combines industry expertise with strong logistics to provide comprehensive generic distribution services. Each capability is designed to help healthcare and specialty partners maintain a safe, seamless, and cost-effective supply chain.
+              Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, PPE, and wound care products. We combine precision engineering, strict quality control, and international logistics expertise to deliver trusted healthcare solutions worldwide.
             </p>
           </div>
 
@@ -492,13 +481,13 @@ const Home = () => {
               {/* Left Content */}
               <div className="w-full lg:w-1/2">
                 <span className="text-teal-600 font-bold tracking-wider uppercase text-sm mb-2 block">
-                  Strategic Manufacturer Partnerships
+                 GLOBAL MANUFACTURING EXCELLENCE
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Trusted Partnerships, Reliable Supply
+                  Precision Manufacturing, Worldwide Supply
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  Alira strengthens its nationwide supply reliability through long-standing partnerships with leading generic manufacturers. These strategic alliances ensure verified authenticity, stable pricing, and consistent access to essential medications across multiple therapeutic areas.
+                  Alira Pharmaceutical is a leading manufacturer and global exporter of surgical instruments, medical disposables, and hospital supplies. With advanced production facilities and strict quality control systems, we deliver precision-crafted products trusted by healthcare professionals across international markets. Our commitment to quality, compliance, and timely delivery ensures dependable supply worldwide.
                 </p>
 
                 <div className="space-y-8">
@@ -510,9 +499,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Direct Sourcing</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing Expertise</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        Direct Sourcing From Trusted And Approved Manufacturers Ensures Product Integrity And Verified Traceability.
+                        State-of-the-art production facilities equipped with modern machinery ensure precision, durability, and consistent quality across all product categories.
                       </p>
                     </div>
                   </div>
@@ -525,9 +514,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">75+ Manufacturer Network</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Global Export Network</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        Partnered With 75+ Leading Generic Manufacturers Across The U.S. And Global Markets.
+                        Serving hospitals, distributors, and healthcare institutions across multiple countries with efficient logistics and reliable international shipping.
                       </p>
                     </div>
                   </div>
@@ -540,9 +529,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Verified Authenticity</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Quality & Compliance</h3>
                       <p className="text-gray-600 leading-relaxed text-sm">
-                        Every Product Undergoes Multi-Step Verification And Documentation To Confirm Authenticity Before Distribution.
+                        All products are manufactured under strict quality standards using medical-grade materials, ensuring safety, performance, and regulatory compliance.
                       </p>
                     </div>
                   </div>
@@ -568,319 +557,67 @@ const Home = () => {
           </div>
         </div>
 
-        {/* --- Human & Animal Health Section (New) --- */}
-        <div className="py-20 lg:py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {/* Header */}
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                Human & Animal Health
-              </h2>
-              <div className="h-1 w-24 bg-teal-500 mx-auto mb-6 rounded-full"></div>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                At Alira, equal commitment is given to human and animal health, ensuring safe, compliant, and reliable access to quality pharmaceuticals across the U.S. under NABP, FDA, and DSCSA 2025 standards.
-              </p>
-            </div>
-
-            {/* Human Health Section (Image Left / Content Right) */}
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-24 lg:mb-32">
-
-              {/* Image Side */}
-              <div className="w-full lg:w-1/2 relative order-2 lg:order-1">
-                {/* Decorative Blob */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-lime-100 rounded-full blur-3xl -z-10 opacity-60"></div>
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                  {/* Placeholder for Human Health Image */}
-                  <img
-                    src="https://images.unsplash.com/photo-1576091160550-217358c7e618?auto=format&fit=crop&q=80&w=600"
-                    alt="Human Health Pharmacist"
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-
-              {/* Content Side */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-2">
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">Human Health</h3>
-                <p className="text-gray-500 mb-8 leading-relaxed">
-                  Alira Supports Healthcare Facilities Nationwide With Access To Safe, Cost-Effective Generic Formulations. Each Product Is Stored And Distributed Following The Strictest Compliance Standards.
-                </p>
-
-                <div className="space-y-6">
-                  {/* Item 1 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <ClipboardList className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Comprehensive Product Range</h4>
-                      <p className="text-sm text-gray-600 mt-1">A Broad Portfolio Of Quality-Assured Generic Pharmaceuticals Designed To Support Hospitals, LTC Networks, And Specialty Care Facilities.</p>
-                    </div>
-                  </div>
-                  {/* Item 2 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <Building2 className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Hospital & Specialty Pharmacy Support</h4>
-                      <p className="text-sm text-gray-600 mt-1">Reliable Distribution Designed To Help Hospitals And Specialty Networks Maintain Consistent Treatment Availability.</p>
-                    </div>
-                  </div>
-                  {/* Item 3 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <ShieldCheck className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Regulatory Compliance</h4>
-                      <p className="text-sm text-gray-600 mt-1">Strict Adherence To NABP And FDA Guidelines, Ensuring Secure, Compliant, And Traceable Delivery Of Human Health Products.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8">
-                  <button className="bg-teal-500 text-white px-6 py-2 rounded-md font-semibold hover:bg-teal-600 transition-colors shadow-lg shadow-teal-500/30">
-                    Know More
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Animal Health Section (Content Left / Image Right) */}
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-              {/* Content Side */}
-              <div className="w-full lg:w-1/2">
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">Animal Health</h3>
-                <p className="text-gray-500 mb-8 leading-relaxed">
-                  Alira extends its trusted distribution network to veterinary hospitals, clinics, and animal care providers, ensuring consistent access to essential products.
-                </p>
-
-                <div className="space-y-6">
-                  {/* Item 1 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <Heart className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Veterinary Product Lines</h4>
-                      <p className="text-sm text-gray-600 mt-1">Dedicated Pharmaceutical Solutions Designed For Veterinarians, Clinics, And Animal Healthcare Facilities.</p>
-                    </div>
-                  </div>
-                  {/* Item 2 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <FlaskConical className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Specialty Formulations</h4>
-                      <p className="text-sm text-gray-600 mt-1">Sutures, Oncology Formulations, And Generic Alternatives Tailored For Animal Health Practices.</p>
-                    </div>
-                  </div>
-                  {/* Item 3 */}
-                  <div className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                      <Truck className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Trusted Distribution</h4>
-                      <p className="text-sm text-gray-600 mt-1">Compliant With All State And Federal Regulations To Guarantee Authentic, Traceable Supply For Animal Care Providers.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8">
-                  <button className="bg-teal-500 text-white px-6 py-2 rounded-md font-semibold hover:bg-teal-600 transition-colors shadow-lg shadow-teal-500/30">
-                    Know More
-                  </button>
-                </div>
-              </div>
-
-              {/* Image Side */}
-              <div className="w-full lg:w-1/2 relative">
-                {/* Decorative Blob */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sky-100 rounded-full blur-3xl -z-10 opacity-60"></div>
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                  {/* Placeholder for Animal Health Image */}
-                  <img
-                    src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?auto=format&fit=crop&q=80&w=600"
-                    alt="Veterinary Care"
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-
-            </div>
-
-
-
-
-
-          </div>
-        </div>
-
-
-        {/* --- Mission & Vision Section (New) --- */}
-        <div className="bg-gray-50 py-20 lg:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {/* Main Header */}
-            <div className="text-center mb-20">
-              <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
-                Mission & Vision
-              </h2>
-              <div className="h-1 w-24 bg-teal-500 mx-auto rounded-full"></div>
-            </div>
-
-            {/* Content Container */}
-            <div className="space-y-24 lg:space-y-32">
-
-              {/* Mission Section (Image Left / Text Right) */}
-              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                {/* Image Placeholder */}
-                <div className="w-full lg:w-1/2">
-                  {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
-                      <span className="text-lg font-bold">Mission Image Placeholder</span>
-                      <span className="text-sm">(Click to Upload Image)</span>
-                    </div>
-                    {/* Optional: Add actual image src when available */}
-                    <img
-                      src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Mission+Image"
-                      alt="Mission Placeholder"
-                      className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
-                    />
-                  </a>
-                </div>
-
-                {/* Text Content */}
-                <div className="w-full lg:w-1/2">
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 border-l-8 border-teal-500 pl-6">
-                    Mission
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                    To advance healthcare delivery by ensuring access to safe, effective, and affordable generic pharmaceuticals through innovation, compliance, and service excellence. Alira is committed to empowering healthcare providers—hospitals, long-term care facilities, specialty clinics, and veterinary networks—through transparent operations, ethical sourcing, and nationwide reliability.
-                  </p>
-
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Our mission focuses on:</h4>
-                    <ul className="space-y-4">
-                      {[
-                        "Ensuring Secure, Compliant, And Traceable Pharmaceutical Distribution Across All 50 States.",
-                        "Maintaining Ethical And Transparent Partnerships With Healthcare Providers And Manufacturers.",
-                        "Promoting Innovation In Logistics, Compliance, And Digital Fulfillment For Greater Efficiency.",
-                        "Upholding Regulatory Integrity Through NABP, FDA, And DSCSA 2025 Compliance.",
-                        "Creating Long-Term Value By Prioritizing Patient Safety And Partner Trust."
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700 leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Vision Section (Text Left / Image Right) */}
-              <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
-                {/* Image Placeholder */}
-                <div className="w-full lg:w-1/2">
-                  {/* Using anchor tag as placeholder container */}
-                  <a href="#" className="block relative rounded-4xl overflow-hidden shadow-xl aspect-4/3 group bg-white border border-gray-100 hover:border-teal-200 transition-colors">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 group-hover:text-teal-600 transition-colors">
-                      <span className="text-lg font-bold">Vision Image Placeholder</span>
-                      <span className="text-sm">(Click to Upload Image)</span>
-                    </div>
-                    {/* Optional: Add actual image src when available */}
-                    <img
-                      src="https://via.placeholder.com/800x600/f0fdfa/14b8a6?text=Vision+Image"
-                      alt="Vision Placeholder"
-                      className="w-full h-full object-cover opacity-0 hover:opacity-10 transition-opacity"
-                    />
-                  </a>
-                </div>
-
-                {/* Text Content */}
-                <div className="w-full lg:w-1/2">
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 border-l-8 border-teal-500 pl-6">
-                    Vision
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                    To be among the nation's most trusted pharmaceutical distribution companies, defined by integrity, professionalism, and continuous innovation. Alira envisions a future where compliant and affordable access to quality pharmaceuticals strengthens the entire continuum of care.
-                  </p>
-
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Our vision aspires to:</h4>
-                    <ul className="space-y-4">
-                      {[
-                        "Lead The U.S. Market As A Benchmark In Generic Pharmaceutical Distribution.",
-                        "Advance Technology-Driven Operations That Enhance Fulfillment Speed And Traceability.",
-                        "Build Sustainable Business Practices That Support Healthcare Accessibility Nationwide.",
-                        "Foster A Partner-First Culture Rooted In Transparency And Responsiveness.",
-                        "Continue Setting New Standards Of Reliability And Trust Across Human And Animal Health Sectors."
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <CheckSquare className="w-6 h-6 text-teal-600 shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700 leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        {/* --- Sign Up Section --- */}
+        {/* --- How We Work Section --- */}
         <div className="bg-teal-500 py-20 lg:py-28 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
                 Signing Up with Us, Effortlessly.
               </h2>
+              <p className="text-xl md:text-2xl text-teal-100 font-medium">
+                How We Work With Global Buyers
+              </p>
             </div>
 
             {/* Steps Grid */}
-            <div className="grid md:grid-cols-3 gap-12 lg:gap-16 text-left">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 text-left">
 
               {/* Step 1 */}
               <div className="space-y-4">
                 <div className="text-6xl font-bold opacity-80">1.</div>
-                <h3 className="text-2xl font-bold">Easy Online Application</h3>
+                <h3 className="text-2xl font-bold">Product Selection</h3>
                 <p className="text-teal-50 text-lg leading-relaxed">
-                  Access our easy-to-use online form. Fill in the necessary information, such as the name of the trader, sales representative details, location, and AP name, among other details.
+                  Browse our surgical, medical disposables, and PPE product categories. 
+                  Share your required specifications or bulk inquiry.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="space-y-4">
                 <div className="text-6xl font-bold opacity-80">2.</div>
-                <h3 className="text-2xl font-bold">Application Review</h3>
+                <h3 className="text-2xl font-bold">Quotation & Customization</h3>
                 <p className="text-teal-50 text-lg leading-relaxed">
-                  Our team will review and verify your application to ensure security and compliance throughout the process.
+                  We provide competitive export pricing, OEM/private labeling options, 
+                  and packaging customization based on your market needs.
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="space-y-4">
                 <div className="text-6xl font-bold opacity-80">3.</div>
-                <h3 className="text-2xl font-bold">Welcome Onboard</h3>
+                <h3 className="text-2xl font-bold">Manufacturing & Quality Inspection</h3>
                 <p className="text-teal-50 text-lg leading-relaxed">
-                  We will activate your account, and it will be ready to execute transactions and monitor consignments, giving you comprehensive control over your account parameters.
+                  All products undergo strict quality control and certification checks 
+                  before dispatch.
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="space-y-4">
+                <div className="text-6xl font-bold opacity-80">4.</div>
+                <h3 className="text-2xl font-bold">Global Shipping & Documentation</h3>
+                <p className="text-teal-50 text-lg leading-relaxed">
+                  We handle export documentation, customs clearance, and international 
+                  logistics for smooth delivery worldwide.
                 </p>
               </div>
 
             </div>
           </div>
         </div>
+
 
 
 

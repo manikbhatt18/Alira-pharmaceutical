@@ -96,7 +96,7 @@ const Category2 = () => {
                    <img 
                     src={item.image} 
                     alt={item.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
                 {/* Decorative Accent */}
