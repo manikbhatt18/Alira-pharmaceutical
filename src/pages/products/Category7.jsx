@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
 import gloves from '../../assets/Images/surgicalgloves.jpeg';
 import nitrile from '../../assets/Images/nitrile.jpeg';
@@ -8,6 +9,7 @@ import latex from '../../assets/Images/latex.jpeg';
 
 const Category7 = () => {
   const { productId } = useParams();
+  const { openQuotePopup } = useQuotePopup();
 
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
@@ -70,7 +72,7 @@ const Category7 = () => {
           >
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                    <img 
                     src={item.image} 
                     alt={item.name} 
@@ -97,7 +99,7 @@ const Category7 = () => {
                 {item.description}
               </p>
 
-              <button className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
+              <button onClick={openQuotePopup} className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
                 Request Quote
                 <span className="transform group-hover/btn:translate-x-1 transition-transform">→</span>
               </button>

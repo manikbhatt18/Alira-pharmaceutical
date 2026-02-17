@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 
 
@@ -106,26 +107,6 @@ const faqData = [
   {
     question: "Does Alira offer nationwide pharmaceutical distribution?",
     answer: "Absolutely. Our robust logistics network covers all 50 states, ensuring timely and secure delivery of pharmaceuticals regardless of your facility's location."
-  },
-  {
-    question: "What types of products does Alira distribute?",
-    answer: "Our catalog includes a vast array of generic pharmaceuticals, over-the-counter (OTC) medications, injectables, vaccines, and specialty products tailored for both acute and chronic care needs."
-  },
-  {
-    question: "How does Alira support long-term care (LTC) facilities?",
-    answer: "We offer tailored packaging, automated dispensing support, and consistent inventory management services designed specifically to meet the unique high-volume and compliance needs of LTC providers."
-  },
-  {
-    question: "What sets Alira apart from other pharmaceutical distribution companies?",
-    answer: "Our unique combination of deep industry expertise, a dual focus on human and animal health, uncompromised regulatory compliance, and a partner-centric approach makes us more than just a distributor—we are a strategic ally in your growth."
-  },
-  {
-    question: "Can specialty and compounding pharmacies order directly through Alira?",
-    answer: "Yes, we offer a dedicated portal for specialty and compounding pharmacies, providing access to hard-to-find active pharmaceutical ingredients (APIs) and specialized dosage forms."
-  },
-  {
-    question: "How can new customers partner with Alira?",
-    answer: "Partnering is simple. Visit our 'New Customer Application' page, fill out the necessary business and license details, and our compliance team will review and approve your account for immediate ordering."
   }
 ];
 
@@ -164,6 +145,8 @@ const Home = () => {
   const toggleReadMore = (id) => {
     setExpandedCardId(expandedCardId === id ? null : id);
   };
+
+  const { openQuotePopup } = useQuotePopup();
 
   // Auto-slide effect for Capabilities Carousel
   useEffect(() => {
@@ -242,7 +225,7 @@ const Home = () => {
                 <button className="px-8 py-3 rounded-md border-2 border-teal-100 text-teal-50 font-semibold hover:bg-white hover:text-teal-900 transition-colors">
                   Get Product Catalog
                 </button>
-                <button className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg">
+                <button onClick={openQuotePopup} className="px-8 py-3 rounded-md bg-white text-teal-900 font-semibold hover:bg-teal-50 transition-colors shadow-lg cursor-pointer">
                   Request a Quote
                 </button>
               </div>

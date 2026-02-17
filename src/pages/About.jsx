@@ -1,4 +1,5 @@
 import React from 'react'
+import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { ClipboardList, User, Hand, Award, CheckSquare, Globe, Scan, DollarSign, Lightbulb, Users,Truck, ChevronRight, Factory, } from 'lucide-react';
 
 
@@ -49,6 +50,7 @@ const featuresData = [
 ];
 
 const About = () => {
+  const { openQuotePopup } = useQuotePopup();
   return (
     <div>
 
@@ -69,12 +71,12 @@ const About = () => {
         {/* Banner Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-            About Us
+            Company Profile
           </h1>
           <div className="flex items-center justify-center gap-2 text-teal-100 text-sm md:text-base font-medium">
             <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>|</span>
-            <span className="text-white">About Us</span>
+            <span className="text-white">Company Profile</span>
           </div>
         </div>
       </div>
@@ -131,52 +133,7 @@ const About = () => {
             </div>
         </section>
 
-        {/* --- Why Choose Us Section --- */}
-        <div className="bg-white py-16 lg:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 uppercase tracking-wide">
-                Why Choose Us
-              </h2>
-              <div className="h-1 w-20 bg-teal-500 mx-auto mb-8 rounded-full"></div>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Delivering precision-engineered surgical instruments and medical supplies with global quality standards and reliable export capabilities.
-              </p>
-            </div>
-
-            {/* Grid Layout */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuresData.map((feature) => (
-                <div
-                  key={feature.id}
-                  className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col h-full"
-                >
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <feature.icon className="w-10 h-10 text-teal-600" strokeWidth={1.5} />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-
-                  {/* Text Content */}
-                  <div className="text-gray-600 text-sm leading-relaxed mb-4 grow">
-                    <p>{feature.shortText}</p>
-
-                    
-                  </div>
-
-                  
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
+      
 
       {/* --- Mission & Vision Section (New) --- */}
         <div className="bg-gray-50 py-20 lg:py-32">
@@ -340,7 +297,7 @@ const About = () => {
 
       {/* CTA Button */}
       <div className="md:text-right mt-8 md:mt-0 flex items-center md:justify-end">
-        <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-md hover:bg-gray-100 transition-colors shadow-lg">
+        <button onClick={openQuotePopup} className="cursor-pointer bg-white text-teal-600 font-bold py-3 px-8 rounded-md hover:bg-gray-100 transition-colors shadow-lg">
           Request a Quote
         </button>
       </div>

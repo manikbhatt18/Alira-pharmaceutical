@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
 import langenback from '../../assets/Images/langenback.jpeg';
 import selfretaining from '../../assets/Images/selfretaining.jpeg';
@@ -10,6 +11,7 @@ import volkman from '../../assets/Images/volkmann.jpeg';
 
 const Category2 = () => {
   const { productId } = useParams();
+  const { openQuotePopup } = useQuotePopup();
 
   // Helper to create URL slugs (Matches Navbar logic for scrolling)
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
@@ -121,7 +123,7 @@ const Category2 = () => {
                 {item.description}
               </p>
 
-              <button className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
+              <button onClick={openQuotePopup} className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
                 Request Quote
                 <span className="transform group-hover/btn:translate-x-1 transition-transform">→</span>
               </button>

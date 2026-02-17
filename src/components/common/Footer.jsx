@@ -1,7 +1,18 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Printer, Linkedin, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  // Function to handle "opening" the navbar dropdown (simulated via event/scroll)
+  const handleOpenProducts = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // This dispatches an event that the Navbar can listen to if implemented, 
+    // or simply brings the user to the top where the menu is.
+    window.dispatchEvent(new Event('open-products-menu'));
+  };
+
   return (
     <footer className="bg-[#E0F7FA] text-gray-800 pt-16 pb-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,48 +49,69 @@ const Footer = () => {
               
             </ul>
           </div>
-
-          {/* Column 2: My Account */}
-          <div>
-            <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
-              My Account
-            </h3>
-            <ul className="space-y-3">
-              {['Shop', 'Promotions', 'Become a Customer'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
-                    <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+          
           {/* Column 3: Quick Links */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {[
-                'Pharmaceutical Distribution', 
-                'Pharmacy Wholesale Suppliers', 
-                'Wholesale & Speciality Distribution', 
-                'Login', 
-                'Privacy Policy', 
-                'Customer Service',
-                'FAQ'
-              ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
-                    <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  Company Profile
+                </Link>
+              </li>
+              <li>
+                <a href="#products" onClick={handleOpenProducts} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  Products
+                </a>
+              </li>
+              <li>
+                <Link to="/contact" className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                  <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Column 2: Our Products */}
+          <div>
+            <h3 className="text-lg font-bold uppercase tracking-wide mb-6 text-gray-900">
+              Our Products
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: 'Surgical Instruments', path: '/products/surgical-instruments' },
+                { name: 'Retractors & Elevators', path: '/products/retractors-elevators' },
+                { name: 'Bone & Neuro Instruments', path: '/products/bone-neuro' },
+                { name: 'ENT & Oral Instruments', path: '/products/ent-oral' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="group flex items-center text-sm hover:text-teal-700 transition-colors">
+                    <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+              {/* See More Link */}
+              <li>
+                <a href="#products" onClick={handleOpenProducts} className="group flex items-center text-sm font-semibold text-teal-600 hover:text-teal-800 transition-colors mt-2">
+                  <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+                  See more...
+                </a>
+              </li>
+            </ul>
+          </div>
+
 
           {/* Column 4: Follow Us */}
           <div>
