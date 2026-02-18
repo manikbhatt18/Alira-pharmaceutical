@@ -8,6 +8,7 @@ import Kidney from '../../assets/Images/kidneytray.jpeg';
 
 const Category6 = () => {
   const { productId } = useParams();
+  const { openQuotePopup } = useQuotePopup();
 
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 

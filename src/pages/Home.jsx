@@ -320,44 +320,41 @@ const Home = () => {
         </div>
 
 
-        {/* --- Compliance Section (Updated) --- */}
-        <div className="bg-gray-50 py-16 lg:py-24 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/*
+--- Compliance Section (Updated) ---
+<div className="bg-gray-50 py-16 lg:py-24 border-t border-gray-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-            {/* Header */}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-wider">
-              Certified Quality & Global Standards
-            </h2>
-            <div className="h-1 w-16 bg-teal-500 mx-auto mb-6 rounded-full"></div>
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-wider">
+      Certified Quality & Global Standards
+    </h2>
+    <div className="h-1 w-16 bg-teal-500 mx-auto mb-6 rounded-full"></div>
 
-            <p className="text-xl font-bold text-gray-800 mb-2">
-              Manufactured to International Medical Standards
-            </p>
-            <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-              All our products are manufactured under strict quality control systems using medical-grade raw materials. We adhere to international manufacturing and export standards to ensure safety, reliability, and consistent performance across global markets.
-            </p>
+    <p className="text-xl font-bold text-gray-800 mb-2">
+      Manufactured to International Medical Standards
+    </p>
+    <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+      All our products are manufactured under strict quality control systems using medical-grade raw materials. We adhere to international manufacturing and export standards to ensure safety, reliability, and consistent performance across global markets.
+    </p>
 
-            {/* Logo Grid */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
+        <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
+          ISO Certified Manufacturing
+        </p>
+      </div>
 
-              {/* Box 1 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
-                <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
-                  ISO Certified Manufacturing
-                </p>
-              </div>
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
+        <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
+          Global Export Standards
+        </p>
+      </div>
+    </div>
 
-              {/* Box 2 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 flex items-center justify-center h-48 hover:shadow-md transition-shadow">
-                <p className="text-xl md:text-2xl font-semibold text-gray-800 text-center">
-                  Global Export Standards
-                </p>
-              </div>
+  </div>
+</div>
+*/}
 
-            </div>
-
-          </div>
-        </div>
 
 
         {/* --- Why Choose Us Section --- */}
