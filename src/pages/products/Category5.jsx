@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuotePopup } from '../../components/context/QuotePopupContext';
 
 import scalpel from '../../assets/Images/scalpel.jpeg';
+import ZoomableImage from '../../components/common/ZoomableImage';
 
 
 
@@ -71,12 +72,9 @@ const Category5 = () => {
             <div className="w-full lg:w-1/2">
               <div className="relative group rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <div className="aspect-4/3 overflow-hidden">
-                   {/* Placeholder Link for actual product image */}
-                   <img 
-                    src={item.image} 
-                    alt={item.name} 
-                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
+                   <div className="aspect-4/3 overflow-hidden relative">
+                   <ZoomableImage src={item.image} alt={item.name} />
+                </div>
                 </div>
                 {/* Decorative Accent */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
@@ -100,7 +98,7 @@ const Category5 = () => {
                 {item.description}
               </p>
 
-              <button onClick={openQuotePopup} className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
+              <button onClick={openQuotePopup} className="cursor-pointer inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
                 Request Quote
                 <span className="transform group-hover/btn:translate-x-1 transition-transform">→</span>
               </button>

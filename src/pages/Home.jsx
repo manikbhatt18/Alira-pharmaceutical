@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useQuotePopup } from '../components/context/QuotePopupContext';
 import { Menu, X, ArrowRight, Truck, Medal, FileCheck, Globe, Scan, DollarSign, Lightbulb, Users, ChevronRight, Factory, ShieldCheck, ClipboardList, Building2, Stethoscope, FlaskConical, Heart, CheckSquare, ChevronDown, ChevronUp, Quote, Star } from 'lucide-react';
 
@@ -89,25 +90,29 @@ const capabilitiesData = [
 
 const faqData = [
   {
-    question: "What makes Alira a trusted generic pharmaceutical wholesaler in the U.S.?",
-    answer: "Alira is an NABP-accredited and FDA-compliant generic pharmaceutical wholesaler licensed in all 50 states. With decades of experience in generic pharmaceuticals, it ensures reliable and compliant supply to hospitals, LTC facilities, specialty clinics, compounding pharmacies, and animal health providers."
+    question: "What types of surgical instruments do you export?",
+    answer: "We export a comprehensive range of high-quality surgical instruments including Retractors & Elevators, Bone & Neuro Instruments, ENT & Oral Instruments, Surgical Blades & Accessories, and Trays & Utility Items. Our instruments are manufactured using medical-grade stainless steel and meet international quality standards for hospital and clinical use."
   },
   {
-    question: "Does Alira supply products for both human and animal health?",
-    answer: "Yes, Alira is dedicated to serving both sectors. We provide a comprehensive range of FDA-approved generic medications for human health as well as specialized veterinary formulations, ensuring high standards of care across the board."
+    question: "Do you supply disposable medical products and PPE?",
+    answer: "Yes. We are a reliable exporter of Gloves, Face Masks, PPE Kits, Surgical Drapes & Gowns, Wound Care Products, IV Products, and other medical disposables. All products comply with global healthcare safety standards and are suitable for hospitals, clinics, distributors, and government tenders."
   },
   {
-    question: "Which healthcare sectors does Alira specialize in?",
-    answer: "We specialize in supplying Hospitals, Long-Term Care (LTC) facilities, Specialty Pharmacies, Independent Pharmacies, and Veterinary Clinics with cost-effective and compliant pharmaceutical solutions."
+    question: "Which countries do you export surgical instruments to?",
+    answer: "We export to buyers across the Middle East, Africa, Europe, Asia, and North America. Our logistics network ensures timely delivery and complete export documentation for smooth international trade."
   },
   {
-    question: "How does Alira ensure compliance and product authenticity?",
-    answer: "We strictly adhere to DSCSA 2025 guidelines and maintain rigorous verification processes. By sourcing directly from approved manufacturers and employing advanced track-and-trace technology, we guarantee the authenticity of every product we distribute."
+    question: "Are your surgical instruments certified?",
+    answer: "Yes. Our products are manufactured under strict quality control systems and comply with international certifications such as CE, ISO, and other country-specific regulatory standards depending on buyer requirements."
   },
   {
-    question: "Does Alira offer nationwide pharmaceutical distribution?",
-    answer: "Absolutely. Our robust logistics network covers all 50 states, ensuring timely and secure delivery of pharmaceuticals regardless of your facility's location."
-  }
+    question: "Do you offer bulk supply for distributors and importers?",
+    answer: "Absolutely. We specialize in bulk export of surgical instruments and medical supplies for wholesalers, distributors, hospital chains, and government procurement agencies. Competitive pricing and consistent supply are our core strengths."
+  },
+  {
+    question: "Can you provide OEM or private labeling services?",
+    answer: "Yes. We offer OEM and private labeling services for international buyers. We can customize packaging, branding, labeling, and product specifications according to your market requirements."
+  },
 ];
 
 const reviews = [
@@ -184,6 +189,20 @@ const Home = () => {
     }, 5000); // Change slide every 5 seconds
     return () => clearInterval(timer);
   }, [reviews.length]);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "faq") {
+      const section = document.getElementById("faq");
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 100); // wait for render
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       {/* section 1 */}
@@ -601,7 +620,7 @@ const Home = () => {
 
 
 
-        <div className="bg-white py-16 lg:py-24">
+        <div id="faq" className="bg-white py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Printer, Linkedin, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -12,6 +12,24 @@ const Footer = () => {
     // or simply brings the user to the top where the menu is.
     window.dispatchEvent(new Event('open-products-menu'));
   };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleOpenFAQ = (e) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      // Go to home and tell it to scroll to FAQ
+      navigate("/", { state: { scrollTo: "faq" } });
+    } else {
+      // Already on home, just scroll
+      const section = document.getElementById("faq");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+};
 
   return (
     <footer className="bg-[#E0F7FA] text-gray-800 pt-16 pb-8 font-sans">
@@ -80,6 +98,17 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+
+              <li>
+  <a
+    href="#faq"
+    onClick={handleOpenFAQ}
+    className="group flex items-center text-sm hover:text-teal-700 transition-colors"
+  >
+    <span className="mr-2 text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">»</span>
+    FAQs
+  </a>
+</li>
             </ul>
           </div>
 
