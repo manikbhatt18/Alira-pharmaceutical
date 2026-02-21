@@ -98,9 +98,14 @@ const Category5 = () => {
                 {item.description}
               </p>
 
-              <button onClick={openQuotePopup} className="cursor-pointer inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition-colors group/btn">
+              <button
+                onClick={openQuotePopup}
+                className="cursor-pointer inline-flex items-center gap-2 bg-teal-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md hover:bg-teal-700 hover:shadow-lg transition-all group/btn"
+              >
                 Request Quote
-                <span className="transform group-hover/btn:translate-x-1 transition-transform">→</span>
+                <span className="transform group-hover/btn:translate-x-1 transition-transform">
+                  →
+                </span>
               </button>
             </div>
 
