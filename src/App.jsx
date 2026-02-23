@@ -21,6 +21,7 @@ import Category11 from './pages/products/Category11.jsx'
 import ContactUs from './pages/ContactUs.jsx'
 import PopUp from './components/common/PopUp.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
+import SeoPage from './pages/SeoPage.jsx'
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<ContactUs/>} />
+        <Route path='/seo' element={<SeoPage/>} />
+
 
 
         <Route path="/products/surgical-instruments/:productId" element={<Category1 />} />
